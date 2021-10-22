@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Pankaj-103/BMSCE_MW/issues"
   },
-  "homepage": "https://github.com/Pankaj-103/BMSCE_MW#readme",
+  "homepage": "https://github.com/Pankaj-103/bmsce-mw/views/voting/index.ejs",
   "dependencies": {
     "connect": "^3.7.0",
     "connect-flash": "^0.1.1",
