@@ -1,0 +1,47 @@
+{
+  "name": "projvote",
+  "version": "1.0.0",
+  "description": "vote your friends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pankaj-103/BMSCE_MW.git"
+  },
+  "author": "pankaj sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pankaj-103/BMSCE_MW/issues"
+  },
+  "homepage": "https://github.com/Pankaj-103/BMSCE_MW#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie": "^0.4.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-session": "^1.17.2",
+    "flash": "^1.1.0",
+    "helmet": "^4.6.0",
+    "mongo-connect": "0.0.6",
+    "mongodb": "^4.1.3",
+    "mongoose": "^6.0.12",
+    "mongoose-findorcreate": "^3.0.0",
+    "nodemon": "^2.0.14",
+    "passport": "^0.5.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "session": "^0.1.0"
+  },
+  "engines": {
+    "node": "14.16.1"
+  }
+}

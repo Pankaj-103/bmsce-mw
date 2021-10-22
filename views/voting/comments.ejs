@@ -1,0 +1,23 @@
+<% layout('./layouts/boilerPlate') %>
+
+<div class="row">
+    <div class="col-6 offset-3">
+    
+        <h3><%= votedperson %> </h3>
+        <% let comment=[]; %>
+        <% for(let x of votedata) { %>
+    <% if(x.candidate===votedperson){%> 
+     <% comment.push(x.comment); %> 
+     
+    <% } %> 
+   <% } %>
+<ol>
+    <% for(let c of comment){%>
+        <li><%=c%></li>
+   <% } %>
+
+</ol>
+            
+        </div>
+</div>
+           

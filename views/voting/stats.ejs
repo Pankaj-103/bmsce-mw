@@ -1,0 +1,48 @@
+<% layout('./layouts/boilerplate')%>
+
+    
+    <div class="row">
+        <h1 class="text-center mb-3"> Stats</h1>
+        <div class="col-6 offset-3">
+            <%let candName=[]; %>
+            <% const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);%>
+        
+            <% for(let d of votedata){%>
+                <% candName.push(d.candidate) %>
+                <%}%>
+               <%  let C= new Set(candName)%>
+               <% let newCand= [...C];%>
+               <%for(let n of newCand){%>
+        
+               
+        
+               <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                 
+                  
+                    <h5 class="card-title"> <%= n%></h5>
+                 
+                  
+               
+                    
+                  
+                
+                
+                   <h6 class="card-subtitle mb-2 text-muted"><%=countOccurrences(candName,n)%> <%=countOccurrences(candName,n)>1?'votes':'vote' %> </h6>
+                  
+                      <%for(let d of votedata){%>
+                        <% if(d.candidate==n){%>
+                            <p class="card-text"> <%=d.branch%></p>
+                            <%}%>
+                            <%}%>
+
+                  <a href="/mainpage/comments?candidate=<%=n%>" class="card-link">Show comments</a>
+                  <a href="/mainpage" class="card-link">Mainpage</a>
+                </div>
+              </div>
+              <%}%>
+        
+        
+        </div>
+    </div>
+   

@@ -1,0 +1,40 @@
+<% layout('./layouts/boilerplate')%>
+
+<div class="row">
+    <div class="col-10 offset-1">
+    <h1>Hey, Welcome To BMSCE Most Wanted Contest</h1>
+
+    
+    <p class="text-muted">Vote your secret admirers and let them win the contest</p>
+    <!-- <a href="/mainpage/form"> proceed for voting</a><br>
+<a href="/mainpage/stats">See stats</a> -->
+    <% let Total=0; let CAcount=0; let CBcount=0; let CCcount=0; let CNcount=0; %>
+    <%for(let v of votedata) {%>
+<% Total++;  %>
+<% if(v.branch==='CSE'){ %>
+    <% CAcount++;   %>
+     <%}%>
+     <% if(v.branch==='ECE'){ %>
+        <%  CBcount++;   %>
+         <%}%>
+         <% if(v.branch==='CIVIL'){ %>
+            <%  CCcount++;   %>
+             <%}%>
+             <% if(v.branch==='AEROSPACE'){ %>
+                <%  CNcount++;  %>
+                 <%}%>
+                 
+
+
+        <%}%>
+        <h1><%= Total %> people have already voted</h1>
+        <div class="text-muted">
+        <h3><%= CAcount %> <%= CAcount>1?'people':'person' %> from CSE branch have already voted</h3>
+        <h3><%= CBcount %> <%= CBcount>1?'people':'person' %> from ECE branch have already voted</h3>
+        <h3><%= CCcount %> <%= CCcount>1?'people':'person' %> from CIVIL branch have already voted</h3>
+        <h3><%= CNcount %> <%= CNcount>1?'people':'person' %> from AEROSPACE branch have already voted</h3>
+       
+    </div>
+
+             </div>
+        </div>
