@@ -7,7 +7,7 @@ const findOrCreate=require('mongoose-findorcreate');
 passport.use(new GoogleStrategy({
     clientID: '60310748347-ea3aa5n5i0p3vf6pbrpdu531kndc3p00.apps.googleusercontent.com',
     clientSecret: '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',
-    callbackURL: "http://localhost:3000/google/callback"
+    callbackURL: "https://bmscemw.herokuapp.com/google/callback"
 }, (accessToken, refreshToken, profile, cb) => {
     
 //         console.log('ID: '+profile.id);
