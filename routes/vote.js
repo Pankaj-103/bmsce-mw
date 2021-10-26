@@ -32,9 +32,9 @@ router.get('/stats',isLoggedIn,catchAsync( async (req,res)=>{
     res.render('voting/stats',{votedata});
 }));
 
-router.get('/comments/:name',catchAsync( async(req,res)=>{
+router.get('/comments/:votedperson',catchAsync( async(req,res)=>{
    const votedata= await  Vote.find({});
-   const votedperson=req.params;
+   const {votedperson}=req.params;
    
    res.render('voting/comments',{votedata,votedperson});
 }));
