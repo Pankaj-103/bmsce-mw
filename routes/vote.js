@@ -44,21 +44,21 @@ router.get('/contact',(req,res)=>{
 })
 
 router.post('/', catchAsync( async (req,res)=>{
-       await Vote.findOneAndUpdate({"email":`${req.body.email}`});
+       const vote= await Vote.findOne({"email":`${req.body.email}`});
     
         
-    //   if(votedata){
-    //     res.send('<div style="background-color:red; padding:100px;"><h1 style="text-align:center;"> Sorry!!! you cannot vote twice</h1></div>');
-    //  }
+      if(vote){
+         res.send('<div style="background-color:red; padding:100px;"><h1 style="text-align:center;"> Sorry!!! you cannot vote twice</h1></div>');
+     }
        
-    //   else{
+      else{
     
         const votinginfo=await new Vote(req.body);
 
         await votinginfo.save();
          req.flash('success','You have successfully voted!');
         res.redirect('/mainpage');
-   // }
+    }
 
 
 
