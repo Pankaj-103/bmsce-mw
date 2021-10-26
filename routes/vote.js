@@ -44,7 +44,7 @@ router.get('/contact',(req,res)=>{
 })
 
 router.post('/', catchAsync( async (req,res)=>{
-       await Vote.findOneAndRemove({"email":`${req.body.email}`});
+       await Vote.findOneAndUpdate({"email":`${req.body.email}`});
     
         
     //   if(votedata){
