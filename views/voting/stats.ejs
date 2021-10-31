@@ -45,7 +45,9 @@
                   
                       <%for(let d of votedata){%>
                         <% if(d.candidate==n){%>
-                            <p class="card-text"> <%=d.branch%></p>
+                           
+                          <p class="card-text"> <%=d.branch%></p>
+                          <%break;%>
                             <%}%>
                             <%}%>
 
