@@ -3,16 +3,11 @@
         <h1 class="text-center">Please fill out this form</h1>
         <div class="col-6 offset-3">
             <form action="/mainpage" method="POST">
+               
                 <div class="mb-3">
-                    <label class="form-label" for="name">Enter your Name</label>
-                    <input class="form-control" type="text" id="name" placeholder="Your name" name="name"
-                        >
-
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="email">Enter your branch</label>
-                    <input class="form-control" type="text" id="name" placeholder="Your email" name="email"
-                        >
+                   <label class="form-label" for="email">Enter your Email</label>
+                    <input class="form-control" type="email" id="name" placeholder="Your email" name="email"
+                        value='<%=currentUser.username%>' readonly>
 
                 </div>
                 <div class="mb-3">
