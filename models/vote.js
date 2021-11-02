@@ -2,12 +2,7 @@ const mongoose=require('mongoose');
 
 const  voteSchema= new mongoose.Schema({
    
-    name:{
-        type:String,
-        required:true
-        
-
-    },
+   
     branch:{
             type:String,
             required:true,
